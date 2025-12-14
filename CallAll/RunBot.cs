@@ -94,7 +94,7 @@ namespace CallAll
                     }
                 }
                 string path = @"C:\Software\Ebem.jpg";
-                using (var stream = File.OpenRead(path))
+                using (var stream = File.OpenRead("Ebem.jpg"))
                 {
                     await botClient.SendPhoto(
                         chatId: chatId,
