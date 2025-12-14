@@ -9,8 +9,7 @@ class Program
     public static async Task Main(string[] args)
     {
         var services = new ServiceCollection();
-        string botToken = File.ReadAllText("C:\\Software\\CallAllApi.txt").Trim();
-        services.AddSingleton<ITelegramBotClient>(new TelegramBotClient(botToken));
+        services.AddSingleton<ITelegramBotClient>(new TelegramBotClient("8583175698:AAFfUeUe5uwZqqKME2YAA_jUmJxntrkOrk0"));
         services.AddTransient<RunBot>();
 
         var provider = services.BuildServiceProvider(); 
